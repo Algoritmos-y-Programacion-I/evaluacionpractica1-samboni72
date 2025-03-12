@@ -84,11 +84,13 @@ public class Guacamaya {
     }
 
     /**
-     * Descripcion: Este metodo se encarga de preguntar al usuario el numero de referencias de producto diferentes 
-     * vendidas en el dia e inicializa con ese valor los arreglos encargados de almacenar precios y cantidades
-     * pre: El Scanner reader debe estar inicializado
-     * pre: Los arreglos precios y unidades deben estar declarados
-     * pos: Los arreglos precios y unidades quedan inicializados
+     * Descripcion: Este metodo se encarga de preguntar al usuario el numero de referencias de producto diferentes. 
+     * vendidas en el dia e inicializa con ese valor los arreglos encargados de almacenar precios y cantidades.
+     * pre: El Scanner reader debe estar inicializado.
+     * pre: Los arreglos precios y unidades deben estar declarados.
+     * pos: Los arreglos precios y unidades quedan inicializados.
+
+     * 
      */
     
     public static void establecerCantidadVendida() {
@@ -104,6 +106,9 @@ public class Guacamaya {
      * Descripcion: Este metodo se encarga de solicitar y guardar datos en los arreglos.
      * pre: el usuario debe aregar el numero de referencias.
      * pos: se almacena informacion en los arreglos.
+     * @param int referencias el usuario debe poner un numero de referencias
+     * @return precios [] el arreglo de precios queda con la informacion guardada.
+     * @return unidades [] el arreglo de unidades queda con la informacion guarda.
     */
     public static void solicitarDatos(int referencias){
         for (int i = 0 ; i < referencias; i++){
@@ -117,8 +122,9 @@ public class Guacamaya {
     }
 /**
      * Descripcion: Este metodo se encarga de calcular un total de unidades vendidas mediante una variable "suma" la cual creamos.
-     * pre: El arreglo unidades deben estar declarados
-     * pos: se obtene la suma de unidades vendidas
+     * pre: El arreglo unidades deben estar declarados.
+     * pos: se obtene la suma de unidades vendidas.
+     * @return int suma devuelve la variable "suma" la cual es la suma de las unidades vendias en el el dia.
     */
     public static int calcularTotalUnidadesVendidas(){
         int suma = 0;
@@ -131,8 +137,9 @@ public class Guacamaya {
     }
     /**
      * Descripcion: Este metodo se encarga de calcular el precio promedio de las referencias de productos vendidos.
-     * pre: El arreglo precios deben estar declarados
+     * pre: El arreglo precios deben estar declarados.
      * pos: se obtene el promedio de las unidades vendidas.
+     * @return double suma devuelve la variable "suma" la cual se divide por precios.length para calcular el promedio de precios.
     */
 
     public static double calcularPrecioPromedio(){
@@ -146,8 +153,9 @@ public class Guacamaya {
     }
     /**
      * Descripcion: Este metodo se encarga de calcular el total del precio final de las ventas totales en el dia.
-     * pre: El arreglo unidades deben estar declarados 
+     * pre: El arreglo unidades deben estar declarados.
      * pos: se obtene la suma total de los precios.
+     * @return int suma devuelve la variable "suma" la cual es la suma de los precios.
     */
 
     public static double calcularVentasTotales(){
@@ -161,8 +169,10 @@ public class Guacamaya {
     }
     /**
      * Descripcion: Este metodo se encarga de consultar que productos han sobrepasado el limite, asi nos devuelve cuantos productos han sido los que superaron ese limite.
-     * pre: Los arreglos unidades y precios deben estar declarados 
+     * pre: Los arreglos unidades y precios deben estar declarados.
      * pos: se obtiene un contador el cual nos dice cuantos productos sobrepasan el limite.
+     * @param double limite esta variable es creada para servir como referencia.
+     * @return int contador retorna la variable "contador" la cual es la cantidad de productos que sobrepasan ese limite.
     */
 
     public static int consultarReferenciasSobreLimite(double limite){
