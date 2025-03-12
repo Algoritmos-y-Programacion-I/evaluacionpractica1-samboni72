@@ -103,7 +103,7 @@ public class Guacamaya {
     /**
      * Descripcion: Este metodo se encarga de solicitar y guardar datos en los arreglos.
      * pre: el usuario debe aregar el numero de referencias.
-     * pos: el usuario almacena informacion en los arreglos.
+     * pos: se almacena informacion en los arreglos.
     */
     public static void solicitarDatos(int referencias){
         for (int i = 0 ; i < referencias; i++){
@@ -117,7 +117,8 @@ public class Guacamaya {
     }
 /**
      * Descripcion: Este metodo se encarga de calcular un total de unidades vendidas mediante una variable "suma" la cual creamos.
-     * pos: 
+     * pre: El arreglo unidades deben estar declarados
+     * pos: se obtene la suma de unidades vendidas
     */
     public static int calcularTotalUnidadesVendidas(){
         int suma = 0;
@@ -128,6 +129,11 @@ public class Guacamaya {
         return suma;
 
     }
+    /**
+     * Descripcion: Este metodo se encarga de calcular el precio promedio de las referencias de productos vendidos.
+     * pre: El arreglo precios deben estar declarados
+     * pos: se obtene el promedio de las unidades vendidas.
+    */
 
     public static double calcularPrecioPromedio(){
         int suma = 0;
@@ -138,6 +144,11 @@ public class Guacamaya {
         return (double) suma / precios.length ;
 
     }
+    /**
+     * Descripcion: Este metodo se encarga de calcular el total del precio final de las ventas totales en el dia.
+     * pre: El arreglo unidades deben estar declarados 
+     * pos: se obtene la suma total de los precios.
+    */
 
     public static double calcularVentasTotales(){
         int suma = 0;
@@ -148,6 +159,11 @@ public class Guacamaya {
         return suma;
 
     }
+    /**
+     * Descripcion: Este metodo se encarga de consultar que productos han sobrepasado el limite, asi nos devuelve cuantos productos han sido los que superaron ese limite.
+     * pre: Los arreglos unidades y precios deben estar declarados 
+     * pos: se obtiene un contador el cual nos dice cuantos productos sobrepasan el limite.
+    */
 
     public static int consultarReferenciasSobreLimite(double limite){
         int contador = 0;
