@@ -90,6 +90,7 @@ public class Guacamaya {
      * pre: Los arreglos precios y unidades deben estar declarados
      * pos: Los arreglos precios y unidades quedan inicializados
      */
+    
     public static void establecerCantidadVendida() {
 
         System.out.println("\nDigite el numero de referencias de producto diferentes vendidas en el dia ");
@@ -99,33 +100,64 @@ public class Guacamaya {
         unidades = new int[referencias];
 
     }
-
-    public static void solicitarDatos(){
+    /**
+     * Descripcion: Este metodo se encarga de solicitar y guardar datos en los arreglos.
+     * pre: el usuario debe aregar el numero de referencias.
+     * pos: el usuario almacena informacion en los arreglos.
+    */
+    public static void solicitarDatos(int referencias){
+        for (int i = 0 ; i < referencias; i++){
+            System.out.println("Ponga el numero de unidades:");
+            unidades[i] = reader.nextInt();
+            System.out.println("Ponga el precio:");
+            precios[i] = reader.nextDouble();
+        }
 
      
     }
-
+/**
+     * Descripcion: Este metodo se encarga de calcular un total de unidades vendidas mediante una variable "suma" la cual creamos.
+     * pos: 
+    */
     public static int calcularTotalUnidadesVendidas(){
+        int suma = 0;
+        for (int i = 0 ; i < unidades.length ; i++){
+            suma += unidades [i];
+        }
 
-        return 0;
+        return suma;
 
     }
 
     public static double calcularPrecioPromedio(){
+        int suma = 0;
+        for (int i = 0 ; i < precios.length; i++){
+            suma += precios[i];
 
-        return 0;
+        }
+        return (double) suma / precios.length ;
 
     }
 
     public static double calcularVentasTotales(){
+        int suma = 0;
+        for (int i = 0; i < precios.length; i++){
+            suma += precios[i];
+        }
 
-        return 0;
+        return suma;
 
     }
 
     public static int consultarReferenciasSobreLimite(double limite){
+        int contador = 0;
+        for(int i = 0 ; i < unidades.length; i++){
+            if(unidades[i] * precios[i] > limite){
+                contador ++;
 
-        return 0;
+            }
+        }
+        return contador ;
 
     }
 
